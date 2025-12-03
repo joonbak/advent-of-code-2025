@@ -1,7 +1,7 @@
 with open("input.txt", "r") as file:
     lines = [line.strip() for line in file]
 
-count = 0
+sum = 0
 
 for line in lines:
     best = 0
@@ -9,6 +9,6 @@ for line in lines:
         for j in range(i + 1, len(line)):
             curr = int(line[i] + line[j])
             best = max(best, curr)
-    count += best
+    sum += best
 
-print(count)
+print(sum)
